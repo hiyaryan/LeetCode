@@ -44,3 +44,18 @@ O(1) when the index is known
 
 LL 
 O(n) even when the index is known it must traverse all elements to access the element
+
+## `collections.deque`
+deque (prnounced "deck") stands for *double-ended queue*.
+Allows for the access, insertion, and removal of elements from the beginning or end of a list.
+
+## Implementation of Queues and Stacks
+Main difference in Queues and Stacks is how elements are retrieved.
+
+### Queues (FIFO)
+E.g. add people to a seating list at a restaurant based on when they arrived.
+Add values to a list (enqueue), then remove the value thats been on the list the longest (dequeue).
+
+### Stacks (LIFO)
+E.g. a browsers history functionality that allows a user to go back from the last resource in the history.
+The last element that is inserted on the stack should be the first to be removed.
