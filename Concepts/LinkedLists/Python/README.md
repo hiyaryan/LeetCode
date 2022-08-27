@@ -84,3 +84,40 @@ How to go through every single node starting with the head of the LL and ending 
 
 Using the __iter__ magic method, yield the result of each node while node is not None.
 Note: see LinkedList.py
+
+### Inserting a New Node
+**Inserting at the beginning**
+1. Create a new node.
+2. Reference the next node in the new node as this head.
+3. Point the new node to the head of the list.
+
+Note: see LinkedList.py
+
+**Inserting at the end**
+1. Create a new node
+2. Traverse the LL to the last node
+
+Inserting a node at the end of the LL is required since it cannot be determined which node is last in the list.
+
+Note: see LinkedList.py
+
+**Inserting Between Two Notes**
+Two approached:
+I. Inserting *after* an existing node
+1. Traverse the LL for some identifiable data.
+2. If found set the next node of the new node to the next node of the current node.
+3. Then set the next node of the current node to the new node.
+
+II. Inserting *before* and existing node
+1. Traverse the LL for some identifiable data.
+2. Keep a reference variable of the previous node.
+2. If found set the next node of the new node to the next node of the previous node.
+3. Then set the next node of the current node to the new node.
+
+Note: see LinkedList.py
+
+**Removing a Node**
+1. Traverse the LL for some identifiable data.
+2. Link the previous node with the next node of the current node.
+
+Note: see LinkedList.py
