@@ -119,7 +119,7 @@ II. Inserting *before* and existing node
 
 Note: see LinkedList.py
 
-#### Removing a Node
+### Removing a Node
 1. Traverse the LL for some identifiable data.
 2. Link the previous node with the next node of the current node.
 
