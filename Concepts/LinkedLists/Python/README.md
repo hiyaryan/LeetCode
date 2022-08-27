@@ -55,7 +55,32 @@ Main difference in Queues and Stacks is how elements are retrieved.
 ### Queues (FIFO)
 E.g. add people to a seating list at a restaurant based on when they arrived.
 Add values to a list (enqueue), then remove the value thats been on the list the longest (dequeue).
+deque *common queue functions*: `append` and `popleft`
 
 ### Stacks (LIFO)
 E.g. a browsers history functionality that allows a user to go back from the last resource in the history.
 The last element that is inserted on the stack should be the first to be removed.
+deque *common stack functions*: `appendleft` and `popleft`
+
+
+## Creating a Linked List Data Structure
+Creating an LL from scratch is great for:
+1. Practicing Python.
+2. Learning about data structure theory.
+3. Preparing for job interviews.
+
+### Steps
+Create a class to represent the LL containing
+1. The **head** of the list.
+Note: see LinkedList.py
+
+Create a class to represent a Node in the LL. containing
+1. The **value** of the node.
+2. The **next** node.
+Note: see Node.py
+
+### Traversing a LL
+How to go through every single node starting with the head of the LL and ending at None.
+
+Using the __iter__ magic method, yield the result of each node while node is not None.
+Note: see LinkedList.py
