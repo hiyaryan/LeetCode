@@ -15,15 +15,15 @@ LL are used to implement queues, stacks, and graphs.
 They are also used to manage lifecycle management for an OS application.
 
 ### Queues
-FIFO "First-in First-out"
+#### FIFO "First-in First-out"
 The first element that goes into the list is the first element to be retrieved.
 
 ### Stacks
-LIFO "Last-in First-out"
+#### LIFO "Last-in First-out"
 The last elemet that goes into the list is the first element to be retrieved.
 
 ### Graphs
-Show *relationships* between objects or represents different types of *networks*.
+#### Show *relationships* between objects or represents different types of *networks*.
 **Adjacency list** a list of LL where each vertex of the graph is stored alongside a collection of connected variables.
 
 ## Performance
@@ -74,26 +74,28 @@ Create a class to represent the LL containing
 1. The **head** of the list.
 Note: see LinkedList.py
 
-Create a class to represent a Node in the LL. containing
+#### Create a class to represent a Node in the LL. containing
 1. The **value** of the node.
 2. The **next** node.
+
 Note: see Node.py
 
 ### Traversing a LL
 How to go through every single node starting with the head of the LL and ending at None.
 
 Using the __iter__ magic method, yield the result of each node while node is not None.
+
 Note: see LinkedList.py
 
 ### Inserting a New Node
-**Inserting at the beginning**
+#### Inserting at the beginning
 1. Create a new node.
 2. Reference the next node in the new node as this head.
 3. Point the new node to the head of the list.
 
 Note: see LinkedList.py
 
-**Inserting at the end**
+#### Inserting at the end
 1. Create a new node
 2. Traverse the LL to the last node
 
@@ -101,8 +103,9 @@ Inserting a node at the end of the LL is required since it cannot be determined 
 
 Note: see LinkedList.py
 
-**Inserting Between Two Notes**
+#### Inserting Between Two Notes
 Two approached:
+
 I. Inserting *after* an existing node
 1. Traverse the LL for some identifiable data.
 2. If found set the next node of the new node to the next node of the current node.
@@ -116,7 +119,7 @@ II. Inserting *before* and existing node
 
 Note: see LinkedList.py
 
-**Removing a Node**
+#### Removing a Node
 1. Traverse the LL for some identifiable data.
 2. Link the previous node with the next node of the current node.
 
