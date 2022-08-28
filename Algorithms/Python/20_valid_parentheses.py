@@ -30,28 +30,49 @@
 #    1 <= s.length <= 104
 #    s consists of parentheses only '()[]{}'.
 
-
-
 class Solution(object):
     def isValid(self, s):
         """
+        This function uses a stack data structure and a hashmap
+        to compare closing parenthesis keys with its associated
+        matching opening parenthesis values at the top of the
+        stack which determines if a set of parenthesis are valid.
+
         :type s: str
         :rtype: bool
         """
         
-        if len(s) % 2 == 1:
-            return False
+        stack = []  # list can represent a stack using stack[-1]
+        paren = {')': '(', ']': '[', '}': '{'}
         
-        paren = {
-            '(': False,
-            ')': False,
-            '[': False,
-            ']': False,
-            '{': False,
-            '}': False,
-        }
-        
-        return paren
+        # Loop through all of the parenthesis in the string
+        # appending open parenthesis to the stack while comparing
+        # the top node with the first closing parenthesis
+        for c in s:
+            if c in paren:
+
+                # If the stack is not empty and the node at the
+                # top of the stack matches the value of the closing
+                # parenthesis, the parenthesis is valid.
+                if stack and stack[-1] == paren[c]:
+                    stack.pop()
+
+                # If the stack is empty or the open parenthesis at 
+                # the top of the stack is mismatching then the
+                # parenthesis are not valid.
+                else:
+                    return False
+
+            # If the character is not in the paren dict then it is
+            # an open parenthesis, push it on the stack to be the 
+            # first up to find its matching closign parenthesis.
+            else:
+                stack.append(c)
+
+        # If the stack is not empty then not all open parenthesis
+        # found a matching closing parenthesis, return False,
+        # otherwise, if empty return true.
+        return True if not stack else False
     
     
     def isValidNotNested(self, s):
@@ -94,9 +115,4 @@ s = Solution()
 print(s.isValid("()"))
 print(s.isValid("()[]{}"))
 print(s.isValid("(]"))
-
-print(s.isValid("{[]}"))
-print(s.isValid("("))
-print(s.isValid("()["))
-
 
